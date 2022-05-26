@@ -1,9 +1,6 @@
 package com.healthycoderapp;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import org.junit.jupiter.api.function.Executable;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -68,8 +65,10 @@ public class BMICalculatorTest {
     }
 
     @Nested
+    @DisplayName("Sample inner class display name")
     class FindCoderWithWorstBMITests {
         @Test
+        @Disabled
         void shouldReturnCoderWithWorstBMIIn1MsWhenCoderListHas10000Elements() {
             assumeTrue(BMICalculatorTest.this.enviroment.equals("prod"));
             //given
